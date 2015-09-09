@@ -8,29 +8,29 @@ Installation
 
 1. Include the [dist/capture.min.js](dist/capture.min.js) file on any page you want to capture the errors and logs for
 
-    ```html
+    ````html
     <script src="path/to/capture.min.js" type="text/javascript"></script>
-    ```
+    ````
 
 2. Install globally with [npm](https://www.npmjs.com/about): `npm install -g openlog`
 3. Start the open log server: `openlog`
 
 ...and that's it! Now you can access your instance of OpenLog at http://127.0.0.1:4783. The default login credentials are:
 
-    ```
+    ````
     username: openlog
     password: password
-    ```
+    ````
 
 Changing Settings
 ------------
 
 Configuration options for OpenLog are set in `/config.inc.json`. To find where your copy of OpenLog is installed, run the following command:
 
-    ```bash
+    ````bash
     $ npm root -g
     > /usr/local/lib/node_modules
-    ```
+    ````
 
 This command returns the path where global npm packages are installed on your machine. Once you know this path, you can visit the OpenLog directory with: `cd <insert_node_path_here>/openlog`. You can then modify the `/config.inc.json` file...
 
@@ -42,11 +42,11 @@ This command returns the path where global npm packages are installed on your ma
 
 Once you have modified those values you can build you own version of OpenLog by running these commands in the root OpenLog directory:
 
-    ```bash
+    ````bash
     npm install -g grunt-cli
     npm install
     grunt build
-    ```
+    ````
 
 Amungst other things, this will build a new `dist/capture.min.js` file. It's now simply a matter of including this new file on your HTML pages, and starting up the OpenLog server again with your new compiled settings.
 
@@ -58,17 +58,17 @@ If you are already logging using `console.log`, `console.info`, `console.warn` a
 
 If you don't want to capture certain logging types you simply add a `data-capture` parameter to the script tag that loaded the `capture.min.js` file and set it to be the types of logs you wish to capture.  For instance, if you only want error logs:
 
-    ```html
+    ````html
     <script src="path/to/capture.min.js" type="text/javascript" data-capture="error"></script>
-    ```
+    ````
 
 ...or if you want error and warning logs `data-capture="warn error"` etc etc.
 
 If your server is not runinng in the expected `/` default location (the hostname the script is included on at port 4783) you can specify the logging URL by setting a `data-log-url=""` attribute on the script tag that loaded the `capture.min.js`:
 
-    ```html
+    ````html
     <script src="path/to/capture.min.js" type="text/javascript" data-log-url="http://logs.mydomain.com"></script>
-    ```
+    ````
 
 Updating OpenLog
 -----------------
