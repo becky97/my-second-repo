@@ -15,7 +15,7 @@ Installation
 2. Install globally with [npm](https://www.npmjs.com/about): `npm install -g openlog`
 3. Start the open log server: `openlog`
 
-...and that's it! Now you can access your instance of OpenLog at http://yourdomain.com:4783. The default login credentials are:
+...and that's it! Now you can access your instance of OpenLog at http://127.0.0.1:4783. The default login credentials are:
 
     ```
     username: openlog
