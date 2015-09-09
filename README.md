@@ -8,29 +8,29 @@ Installation
 
 1. Include the [dist/capture.min.js](dist/capture.min.js) file on any page you want to capture the errors and logs for
 
-    ````html
-    <script src="path/to/capture.min.js" type="text/javascript"></script>
-    ````
+````html
+<script src="path/to/capture.min.js" type="text/javascript"></script>
+````
 
 2. Install globally with [npm](https://www.npmjs.com/about): `npm install -g openlog`
 3. Start the open log server: `openlog`
 
 ...and that's it! Now you can access your instance of OpenLog at http://127.0.0.1:4783. The default login credentials are:
 
-    ````
-    username: openlog
-    password: password
-    ````
+````
+username: openlog
+password: password
+````
 
 Changing Settings
 ------------
 
 Configuration options for OpenLog are set in `/config.inc.json`. To find where your copy of OpenLog is installed, run the following command:
 
-    ````bash
-    $ npm root -g
-    > /usr/local/lib/node_modules
-    ````
+````bash
+$ npm root -g
+> /usr/local/lib/node_modules
+````
 
 This command returns the path where global npm packages are installed on your machine. Once you know this path, you can visit the OpenLog directory with: `cd <insert_node_path_here>/openlog`. You can then modify the `/config.inc.json` file...
 
