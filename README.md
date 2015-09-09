@@ -40,7 +40,7 @@ This command returns the path where global npm packages are installed on your ma
 | Password | Password used to access the admin panel with. Default: `password`     |
 | Port     | The server port that the OpenLog admin panel runs on. Default: `4783` |
 
-Once you have modified those values you can build you own version of OpenLog by running these commands in the root OpenLog directory:
+Once you have modified those values you can build your own version of OpenLog by running these commands in the root OpenLog directory:
 
 ````bash
 npm install -g grunt-cli
@@ -52,9 +52,13 @@ Amungst other things, this will build a new `dist/capture.min.js` file. It's now
 
 Usage
 ------------
-If you are already logging using `console.log`, `console.info`, `console.warn` and `console.error` then OpenLog requires no extra work at all.  It will capture errors globally on your page and listen to calls to the above `console` functions. Alternatively, if you don't want to log information to the clients console, you can use OpenLog's built in methods:
+If you are already logging using `console.log`, `console.info`, `console.warn` and `console.error` then OpenLog requires no extra work at all.  It will capture errors globally on your page and listen to calls to the above `console` functions. Alternatively, if you don't want to explicitly log information to the clients console, you can use OpenLog's built in methods:
 
-`Log.info(arguments)`, `Log.warn(arguments)`, `Log.error(arguments)`. `Log` is a globally defined object by the `capture.min.js` file.
+- `Log.error();`
+- `Log.warn();`
+- `Log.info();`
+
+`Log` is a globally defined object by the `capture.min.js` file.
 
 If you don't want to capture certain logging types you simply add a `data-capture` parameter to the script tag that loaded the `capture.min.js` file and set it to be the types of logs you wish to capture.  For instance, if you only want error logs:
 
