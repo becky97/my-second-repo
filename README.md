@@ -9,7 +9,7 @@ Installation
 1. Include the [dist/capture.min.js](dist/capture.min.js) file on any page you want to capture the errors and logs for
 
     ```html
-    <script src="path/to/capture.min.js" type="text/javascript" language="javascript"></script>
+    <script src="path/to/capture.min.js" type="text/javascript"></script>
     ```
 
 2. Install globally with [npm](https://www.npmjs.com/about): `npm install -g openlog`
@@ -59,7 +59,7 @@ If you are already logging using `console.log`, `console.info`, `console.warn` a
 If you don't want to capture certain logging types you simply add a `data-capture` parameter to the script tag that loaded the `capture.min.js` file and set it to be the types of logs you wish to capture.  For instance, if you only want error logs:
 
     ```html
-    <script src="path/to/capture.min.js" type="text/javascript" language="javascript" data-capture="error"></script>
+    <script src="path/to/capture.min.js" type="text/javascript" data-capture="error"></script>
     ```
 
 ...or if you want error and warning logs `data-capture="warn error"` etc etc.
@@ -67,7 +67,7 @@ If you don't want to capture certain logging types you simply add a `data-captur
 If your server is not runinng in the expected `/` default location (the hostname the script is included on at port 4783) you can specify the logging URL by setting a `data-log-url=""` attribute on the script tag that loaded the `capture.min.js`:
 
     ```html
-    <script src="path/to/capture.min.js" type="text/javascript" language="javascript" data-log-url="http://logs.mydomain.com"></script>
+    <script src="path/to/capture.min.js" type="text/javascript" data-log-url="http://logs.mydomain.com"></script>
     ```
 
 Updating OpenLog
