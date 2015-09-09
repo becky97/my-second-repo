@@ -42,11 +42,11 @@ This command returns the path where global npm packages are installed on your ma
 
 Once you have modified those values you can build you own version of OpenLog by running these commands in the root OpenLog directory:
 
-    ````bash
-    npm install -g grunt-cli
-    npm install
-    grunt build
-    ````
+````bash
+npm install -g grunt-cli
+npm install
+grunt build
+````
 
 Amungst other things, this will build a new `dist/capture.min.js` file. It's now simply a matter of including this new file on your HTML pages, and starting up the OpenLog server again with your new compiled settings.
 
@@ -58,17 +58,17 @@ If you are already logging using `console.log`, `console.info`, `console.warn` a
 
 If you don't want to capture certain logging types you simply add a `data-capture` parameter to the script tag that loaded the `capture.min.js` file and set it to be the types of logs you wish to capture.  For instance, if you only want error logs:
 
-    ````html
-    <script src="path/to/capture.min.js" type="text/javascript" data-capture="error"></script>
-    ````
+````html
+<script src="path/to/capture.min.js" type="text/javascript" data-capture="error"></script>
+````
 
 ...or if you want error and warning logs `data-capture="warn error"` etc etc.
 
 If your server is not runinng in the expected `/` default location (the hostname the script is included on at port 4783) you can specify the logging URL by setting a `data-log-url=""` attribute on the script tag that loaded the `capture.min.js`:
 
-    ````html
-    <script src="path/to/capture.min.js" type="text/javascript" data-log-url="http://logs.mydomain.com"></script>
-    ````
+````html
+<script src="path/to/capture.min.js" type="text/javascript" data-log-url="http://logs.mydomain.com"></script>
+````
 
 Updating OpenLog
 -----------------
