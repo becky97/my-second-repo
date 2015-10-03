@@ -78,6 +78,29 @@ Provide a breif description of what your app does. This helps gexpress generate 
 
 <h4 id="user-content-routes"><a href="https://github.com/adammcarth/gexpress/wiki/#">Routes [--routes]</a></h4>
 
+```bash
+--routes filename:[/url][/url2]
+--routes directory:filename:[/url]
+--routes directory:directory:directory:filename:[/url][/url2][/url3]
+```
+
+Generating routes in gexpress is actually quite simple - you simply need to learn how gexpress likes to organise routes in the filesystem. The concept is this:
+
+- Besides files in the very top level `./routes` folder, all subdirectories and filenames within should represent a subset of the actual route.
+
+For example, it would be expected that routes inside the file: `./routes/admin/dashboard.js` would start with `http://blah.com/admin/dashboard/<routes>`. The gexpress generator uses this filestructure initially to nest your routes under their appropriate namespaces. It's basically a file system representation of your routes, and as it turns out, a kick ass way to organise and group related routes into files.
+
+As pointed out before, this concept *does **not*** apply to the files in the top level routes folder. `./routes/pages.js` (for example), would **not** get nested under `/pages` because it doesn't have a parent directory.
+
+```bash
+--routes pages:[/admin/secret_stuff] # NO.
+--routes admin:secret_stuff:[/] # YES.
+
+--routes blog:[/blog/posts][/blog/posts/new][/blog/posts/update][/blog/posts/destroy] # NO.
+--routes blog:posts[/][/new][/update][/destroy] # YES.
+```
+
+[Read more.](https://github.com/adammcarth/gexpress/wiki/#)
 
 <h4 id="user-content-views"><a href="https://github.com/adammcarth/gexpress/wiki/#">Views [--views]</a></h4>
 
