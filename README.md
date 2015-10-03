@@ -10,7 +10,7 @@ You should install gexpress globally using the [Node Package Mangager](http://np
 npm install gexpress -g
 ```
 
-## CLI Usage
+### CLI Usage
 
 ```bash
 gexpress <options>
