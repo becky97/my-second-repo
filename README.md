@@ -7,6 +7,7 @@ The gexpress project is a structurally opinionated scaffold generator for [http:
 - Asset pipeline that's easily configurable and ready for drop-in files.
   - Configured [SASS](http://sass-lang.com) compiler and minification for frontend assets using [gulp](http://gulpjs.com).
 - [Handlebars](http://handlebarsjs.com) templating system (if you seriously want to use Jade, leave now).
+- Frontend error handlers for development and production.
 - A few frontend helpers and utilities to keep your HTML looking beautiful.
 - Git integrations that make you smile.
 
@@ -44,6 +45,10 @@ gexpress MyApp
 ```
 
 ```bash
+gexpress MyApp --port 4050 --routes main:[/][/foo][/bar]
+```
+
+```bash
 gexpress MyApp --description="MyApp does amazing things."
                --routes pages:[/][/about][/contact] admin:dashboard:[/]
                --views [homepage][about][contact] admin:dashboard:[home]
@@ -61,7 +66,7 @@ Huh? Make sure you read on for further explanation of how scaffolding works in g
 gexpress --app MyApp
 ```
 
-This tells gexpress what your application is named, and is this only option required to generate an app. A new folder will be created in your current directory under the application's name. You'll soon find out this name is used in a lot more places than just the folder, so choose wisely. [Read more about it on the wiki page.](https://github.com/adammcarth/gexpress/wiki/#)
+This tells gexpress what your application is named, and is this only option required to generate an app. A new folder will be created in your current directory under the application's name. You'll soon find out this name is used in a lot more places than just the folder, so choose wisely. [Read more on the wiki page.](https://github.com/adammcarth/gexpress/wiki/#)
 
 <h4 id="user-content-app-description"><a href="https://github.com/adammcarth/gexpress/wiki/#">App Description [--description]</a></h4>
 
