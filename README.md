@@ -5,7 +5,7 @@ The gexpress project is a structurally opinionated scaffold generator for [http:
 - Scaffold URL's, view files and layouts.
 - Use [ES6 Javascript](https://github.com/lukehoban/es6features) anywhere in your application (including frontend and backend).
 - Asset pipeline that's easily configurable and ready for drop-in files.
-- Configured [SASS](http://sass-lang.com) compiler and minification for frontend assets using [gulp](http://gulpjs.com).
+  - Configured [SASS](http://sass-lang.com) compiler and minification for frontend assets using [gulp](http://gulpjs.com).
 - [Handlebars](http://handlebarsjs.com) templating system (if you seriously want to use Jade, leave now).
 - A few frontend helpers and utilities to keep your HTML looking beautiful.
 - Git integrations that make you smile.
