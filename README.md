@@ -2,6 +2,13 @@
 
 The gexpress project is a structurally opinionated scaffold generator for [http://expressjs.com](http://expressjs.com). It aims to take the pain out of starting an Express project from scratch, offering a CLI tool to quickly scaffold new applications on the fly and start working on the real code, immediately.
 
+- Use [ES6]() Javascript anywhere in your application (including frontend and backend).
+- Scaffold URL's, view files and layouts.
+- Asset pipeline that's easily configurable and ready for drop-in files.
+- Configured [SASS]() compiler and minification for frontend assets using [gulp]().
+- [Handlebars]() templating system (if you seriously want to use Jade, leave now).
+- A few frontend helpers and utilities to make your HTML look beautiful.
+
 ### Installation
 
 You should install gexpress globally using the [Node Package Mangager](http://npmjs.com). This will save gexpress onto your system so it can be used regardless of your current working directory like any other CLI tool.
