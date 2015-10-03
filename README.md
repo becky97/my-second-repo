@@ -2,6 +2,14 @@
 
 The gexpress project is structurally opiniated application scaffold generator for [http://expressjs.com](http://expressjs.com). It aims to take the pain out of starting an Express project from scratch, offering a CLI tool to quickly scaffold new applications on the fly and start working on the real code, immediately.
 
+### Installation
+
+You should install gexpress globally using the Node Package Mangager. This will save gexpress onto your system so it can be used regardless of your current working directory like any other CLI tool.
+
+```bash
+npm install gexpress -g
+```
+
 ### Creating a new app with gexpress
 
 ```bash
