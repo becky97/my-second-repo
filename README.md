@@ -10,16 +10,6 @@ You should install gexpress globally using the [Node Package Mangager](http://np
 npm install gexpress -g
 ```
 
-### Creating a new app with gexpress
-
-```bash
-gexpress MyApp --routes pages:[/][/about][/contact] admin:dashboard:[/]
-               --views [homepage][about][contact] admin:dashboard:[home]
-               --layouts [default][admin]
-```
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/10utJGbQQLs" frameborder="0" allowfullscreen></iframe>
-
 ### Usage
 
 ```bash
@@ -38,6 +28,22 @@ gexpress <options>
 | --help                                         | Brings up a list of the options above in the CLI.                             |
 
 The only option *required* by gexpress is `--app` (the application name). You are free to use, or not use, any other settings when creating a new app.
+
+### Example #1
+
+```bash
+gexpress MyApp
+```
+
+### Example #2
+
+```bash
+gexpress MyApp --description="MyApp does amazing things."
+               --routes pages:[/][/about][/contact] admin:dashboard:[/]
+               --views [homepage][about][contact] admin:dashboard:[home]
+               --layouts [default][admin]
+               --port 3000
+```
 
 <h3 id="user-content-app-name">App Name [--app]</h3>
 
