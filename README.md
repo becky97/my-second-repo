@@ -29,13 +29,13 @@ gexpress <options>
 
 The only option *required* by gexpress is `--app` (the application name). You are free to use, or not use, any other settings when creating a new app.
 
-### Example #1
+### Example 1
 
 ```bash
 gexpress MyApp
 ```
 
-### Example #2
+### Example 2
 
 ```bash
 gexpress MyApp --description="MyApp does amazing things."
