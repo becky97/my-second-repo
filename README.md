@@ -65,3 +65,22 @@ Huh? Make sure you read on for further explanation of how scaffolding works in g
 
 <h3 id="user-content-nogit">No Git Repository [--nogit]</h3>
 
+
+
+## Contributing
+
+This project is open source, and contributions from the community are more than welcome. Please report any issues and bugs you encounter, and if you have ideas for the direction that gexpress should move in - you can add a new issue on GitHub that will eventually be flagged with the "enchancement" tag and opened up for community discussion.
+
+You can also contact the author, Adam McArthur, via Twitter: [@adammcarth](https://twitter.com/adammcarth)
+
+Additionally, if you'd like to help code gexpress, you can find useful tasks in the [./TODO.md](https://github.com/adammcarth/gexpress/TODO.md) file. The process for making code contributions is fairly standard:
+
+- Fork this repository
+- Create a new branch: `git checkout -b my-cool-feature`
+- Commit some changes
+- Push your changes to GitHub
+- Send in a pull request to this repository, outlining your changes *in detail*
+
+## License
+
+This open source project is licensed under the MIT license. You can read it here: [./LICENSE.txt](https://github.com/adammcarth/gexpress/LICENSE.txt)
