@@ -29,13 +29,11 @@ gexpress <options>
 
 The only option *required* by gexpress is `--app` (the application name). You are free to use, or not use, any other settings when creating a new app.
 
-### Example 1
+### Quick Examples
 
 ```bash
 gexpress MyApp
 ```
-
-### Example 2
 
 ```bash
 gexpress MyApp --description="MyApp does amazing things."
@@ -45,7 +43,7 @@ gexpress MyApp --description="MyApp does amazing things."
                --port 3000
 ```
 
-Huh? Make sure you read on for further explanation of how scaffolding works in gexpress.
+Huh? Make sure you read on for further explanation of how scaffolding works in gexpress...
 
 <h3 id="user-content-app-name">App Name [--app]</h3>
 
