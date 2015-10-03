@@ -45,6 +45,8 @@ gexpress MyApp --description="MyApp does amazing things."
                --port 3000
 ```
 
+Huh? Make sure you read on for further explanation of how scaffolding works in gexpress.
+
 <h3 id="user-content-app-name">App Name [--app]</h3>
 
 
