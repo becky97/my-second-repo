@@ -47,25 +47,25 @@ Huh? Make sure you read on for further explanation of how scaffolding works in g
 
 ## Options
 
-<h3 id="user-content-app-name">App Name [--app]</h3>
+<h4 id="user-content-app-name">App Name [--app]</h4>
 
 
-<h3 id="user-content-app-description">App Description [--description]</h3>
+<h4 id="user-content-app-description">App Description [--description]</h4>
 
 
-<h3 id="user-content-routes">Routes [--routes]</h3>
+<h4 id="user-content-routes">Routes [--routes]</h4>
 
 
-<h3 id="user-content-views">Views [--views]</h3>
+<h4 id="user-content-views">Views [--views]</h4>
 
 
-<h3 id="user-content-layouts">Layouts [--layouts]</h3>
+<h4 id="user-content-layouts">Layouts [--layouts]</h4>
 
 
-<h3 id="user-content-port">Default Port [--port]</h3>
+<h4 id="user-content-port">Default Port [--port]</h4>
 
 
-<h3 id="user-content-nogit">No Git Repository [--nogit]</h3>
+<h4 id="user-content-nogit">No Git Repository [--nogit]</h4>
 
 
 
