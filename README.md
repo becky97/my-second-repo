@@ -57,19 +57,11 @@ Huh? Make sure you read on for further explanation of how scaffolding works in g
 
 <h4 id="user-content-app-name"><a href="https://github.com/adammcarth/gexpress/wiki/#">App Name [--app]</a></h4>
 
-This tells gexpress what your application is named, and is this only option required to generate an app. As you might have picked up from above examples, the `--app` option is unique in that it doesn't actually need to be typed out. Instead, a shorthand is available by putting the application name directly after `gexpress`.
-
-```bash
-gexpress MyApp
-```
-
-...is exactly the same as...
-
 ```bash
 gexpress --app MyApp
 ```
 
-A new folder will be created in your current directory under the application's name. You'll soon find out this name is used in a lot more places than just the folder, so choose wisely. [Read more about it on the wiki page.](https://github.com/adammcarth/gexpress/wiki/#)
+This tells gexpress what your application is named, and is this only option required to generate an app. A new folder will be created in your current directory under the application's name. You'll soon find out this name is used in a lot more places than just the folder, so choose wisely. [Read more about it on the wiki page.](https://github.com/adammcarth/gexpress/wiki/#)
 
 <h4 id="user-content-app-description"><a href="https://github.com/adammcarth/gexpress/wiki/#">App Description [--description]</a></h4>
 
