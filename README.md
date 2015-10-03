@@ -4,7 +4,7 @@ The gexpress project is structurally opiniated application scaffold generator fo
 
 ### Installation
 
-You should install gexpress globally using the Node Package Mangager. This will save gexpress onto your system so it can be used regardless of your current working directory like any other CLI tool.
+You should install gexpress globally using the [Node Package Mangager](http://npmjs.com). This will save gexpress onto your system so it can be used regardless of your current working directory like any other CLI tool.
 
 ```bash
 npm install gexpress -g
