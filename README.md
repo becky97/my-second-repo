@@ -10,7 +10,7 @@ You should install gexpress globally using the [Node Package Mangager](http://np
 npm install gexpress -g
 ```
 
-### Usage
+## Usage
 
 ```bash
 gexpress <options>
@@ -29,7 +29,7 @@ gexpress <options>
 
 The only option *required* by gexpress is `--app` (the application name). You are free to use, or not use, any other settings when creating a new app.
 
-### Quick Examples
+## Quick Examples
 
 ```bash
 gexpress MyApp
@@ -44,6 +44,8 @@ gexpress MyApp --description="MyApp does amazing things."
 ```
 
 Huh? Make sure you read on for further explanation of how scaffolding works in gexpress...
+
+## Options
 
 <h3 id="user-content-app-name">App Name [--app]</h3>
 
@@ -64,6 +66,14 @@ Huh? Make sure you read on for further explanation of how scaffolding works in g
 
 
 <h3 id="user-content-nogit">No Git Repository [--nogit]</h3>
+
+
+
+## Asset Pipeline
+
+
+
+## Helpers
 
 
 
