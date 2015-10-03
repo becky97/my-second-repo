@@ -13,7 +13,7 @@ gexpress MyApp --routes pages:[/][/about][/contact] admin:dashboard:[/]
 ### Usage
 
 ```bash
-gexpress ...
+gexpress <options>
 ```
 
 | Option                                         | Description                                                                   |
@@ -24,7 +24,7 @@ gexpress ...
 | [--views](#user-content-views)                 | Creates defined view files for your application.                              |
 | [--layouts](#user-content-layouts)             | Creates defined layout files for your application.                            |
 | [--port](#user-content-port)                   | Specify the default port your application runs on.                            |
-| --nogit                                        | Prevents gexpress from creating a new git repository for the app.             |
+| [--nogit](#user-content-nogit)                 | Prevents gexpress from creating a new git repository for the app.             |
 | --help                                         | Brings up a list of the options above in the CLI.                             |
 
 The only option *required* by gexpress is `--app` (the application name). You are free to use, or not use, any other settings when creating a new app.
