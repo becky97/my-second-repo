@@ -1,6 +1,6 @@
 # The Express ES6 App Starter Kit
 
-The gexpress project is a structurally opinionated application scaffold generator for [http://expressjs.com](http://expressjs.com). It aims to take the pain out of starting an Express project from scratch, offering a CLI tool to quickly scaffold new applications on the fly and start working on the real code, immediately.
+The gexpress project is a structurally opinionated scaffold generator for [http://expressjs.com](http://expressjs.com). It aims to take the pain out of starting an Express project from scratch, offering a CLI tool to quickly scaffold new applications on the fly and start working on the real code, immediately.
 
 ### Installation
 
