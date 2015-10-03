@@ -10,6 +10,8 @@ gexpress MyApp --routes pages:[/][/about][/contact] admin:dashboard:[/]
                --layouts [default][admin]
 ```
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/10utJGbQQLs" frameborder="0" allowfullscreen></iframe>
+
 ### Usage
 
 ```bash
