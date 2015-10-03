@@ -29,7 +29,7 @@ gexpress <options>
 
 The only option *required* by gexpress is `--app` (the application name). You are free to use, or not use, any other settings when creating a new app.
 
-## CLI Quick Examples
+## Quick Examples
 
 ```bash
 gexpress MyApp
@@ -45,7 +45,7 @@ gexpress MyApp --description="MyApp does amazing things."
 
 Huh? Make sure you read on for further explanation of how scaffolding works in gexpress...
 
-## CLI Options Explained
+## Options Explained
 
 <h4 id="user-content-app-name">App Name [--app]</h4>
 
