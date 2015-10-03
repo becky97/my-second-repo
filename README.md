@@ -2,12 +2,12 @@
 
 The gexpress project is a structurally opinionated scaffold generator for [http://expressjs.com](http://expressjs.com). It aims to take the pain out of starting an Express project from scratch, offering a CLI tool to quickly scaffold new applications on the fly and start working on the real code, immediately.
 
-- Use [ES6]() Javascript anywhere in your application (including frontend and backend).
+- Use [ES6 Javascript](https://github.com/lukehoban/es6features) anywhere in your application (including frontend and backend).
 - Scaffold URL's, view files and layouts.
 - Asset pipeline that's easily configurable and ready for drop-in files.
-- Configured [SASS]() compiler and minification for frontend assets using [gulp]().
-- [Handlebars]() templating system (if you seriously want to use Jade, leave now).
-- A few frontend helpers and utilities to make your HTML look beautiful.
+- Configured [SASS](http://sass-lang.com) compiler and minification for frontend assets using [gulp](http://gulpjs.com).
+- [Handlebars](http://handlebarsjs.com) templating system (if you seriously want to use Jade, leave now).
+- A few frontend helpers and utilities to keep your HTML looking beautiful.
 
 ### Installation
 
@@ -54,25 +54,25 @@ Huh? Make sure you read on for further explanation of how scaffolding works in g
 
 ## Options Explained
 
-<h4 id="user-content-app-name">App Name [--app]</h4>
+<h4 id="user-content-app-name"><a href="https://github.com/adammcarth/gexpress/wiki/#">App Name [--app]</a></h4>
 
 
-<h4 id="user-content-app-description">App Description [--description]</h4>
+<h4 id="user-content-app-description"><a href="https://github.com/adammcarth/gexpress/wiki/#">App Description [--description]</a></h4>
 
 
-<h4 id="user-content-routes">Routes [--routes]</h4>
+<h4 id="user-content-routes"><a href="https://github.com/adammcarth/gexpress/wiki/#">Routes [--routes]</a></h4>
 
 
-<h4 id="user-content-views">Views [--views]</h4>
+<h4 id="user-content-views"><a href="https://github.com/adammcarth/gexpress/wiki/#">Views [--views]</a></h4>
 
 
-<h4 id="user-content-layouts">Layouts [--layouts]</h4>
+<h4 id="user-content-layouts"><a href="https://github.com/adammcarth/gexpress/wiki/#">Layouts [--layouts]</a></h4>
 
 
-<h4 id="user-content-port">Default Port [--port]</h4>
+<h4 id="user-content-port"><a href="https://github.com/adammcarth/gexpress/wiki/#">Default Port [--port]</a></h4>
 
 
-<h4 id="user-content-nogit">No Git Repository [--nogit]</h4>
+<h4 id="user-content-nogit"><a href="https://github.com/adammcarth/gexpress/wiki/#">No Git Repository [--nogit]</a></h4>
 
 
 
