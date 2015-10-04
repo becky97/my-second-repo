@@ -86,7 +86,7 @@ Provide a breif description of what your app does. This helps gexpress generate 
 
 Generating routes in gexpress is actually quite simple - you simply need to learn how gexpress likes to organise routes in the filesystem. The concept is this:
 
-- Besides files in the very top level `./routes` folder, all subdirectories and filenames within should represent a subset of the actual route.
+- *Besides files in the very top level `./routes` folder, all subdirectories and filenames within should represent a subset of the actual route.*
 
 For example, it would be expected that routes inside the file: `./routes/admin/dashboard.js` would start with `http://blah.com/admin/dashboard/<routes>`. The gexpress generator uses this filestructure initially to nest your routes under their appropriate namespaces. It's basically a file system representation of your routes, and as it turns out, a kick ass way to organise and group related routes into files.
 
