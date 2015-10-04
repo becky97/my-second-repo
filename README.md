@@ -90,7 +90,7 @@ Generating routes in gexpress is actually quite simple - you simply need to lear
 
 For example, it would be expected that routes inside the file: `./routes/admin/dashboard.js` would start with `http://blah.com/admin/dashboard/<routes>`. The gexpress generator uses this filestructure initially to nest your routes under their appropriate namespaces. It's basically a file system representation of your routes, and as it turns out, a kick ass way to organise and group related routes into files.
 
-As pointed out before, this concept *does **not*** apply to the files in the top level routes folder. `./routes/pages.js` (for example), would **not** get nested under `/pages` because it doesn't have a parent directory.
+As pointed out before, this concept *does not* apply to the files in the top level routes folder. `./routes/pages.js` (for example), would **not** get nested under `/pages` because it doesn't have a parent directory.
 
 Remember that there are no file extensions required in the CLI.
 
@@ -155,7 +155,7 @@ The gexpress generator creates a pre-configured asset pipeline that uses [gulp](
 | `./assets/stylesheets/source/vendor` | N/A                   | Vendor CSS (external libraries) go here.                       |
 | `./assets/stylesheets/compiled`      | `/assets/stylesheets` | All CSS files are compiled into this directory.                |
 
-### Collections
+### Asset Collections
 
 A common technique used in web applications is the concatenate certain groups of CSS & JS files (respectively) in order to cut down the amount of HTTP requests required to load assets on the frontend. The gexpress generated asset pipeline attempts to make this process as easy as possible, by introducing the concept of CSS & JS "collections". Collections are defined in `./config/assets.js`, so no editing of gulp configuration is required...
 
@@ -219,6 +219,24 @@ The collection helpers let you include specific asset collections in layout file
   <!-- Javascript -->
   <script type="text/javascript" src="/assets/javascript/collections/my_js_group.min.js"></script>
 </head>
+```
+
+### Pretify HTML
+
+Indents HTML `n` spaces into the correct position in a layout file. Can be used anywhere in your view files; when including partials for instance.
+
+```html
+<body>
+  {{#pretify_html 2}}{{{ body }}}{{/pretify_html}}
+</body>
+```
+
+### Time Ago In Words
+
+Takes a timestamp and returns the time period between then and now in words (eg: '15 minutes ago').
+
+```
+<p>Edited {{time_ago_in_words}} {{comment.updated_at}} {{/time_ago_in_words}}</p>
 ```
 
 ## Contributing
