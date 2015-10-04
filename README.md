@@ -92,6 +92,8 @@ For example, it would be expected that routes inside the file: `./routes/admin/d
 
 As pointed out before, this concept *does **not*** apply to the files in the top level routes folder. `./routes/pages.js` (for example), would **not** get nested under `/pages` because it doesn't have a parent directory.
 
+Remember that there are no file extensions required in the CLI.
+
 ```bash
 --routes pages:[/admin/secret_stuff] # NO.
 --routes admin:secret_stuff:[/] # YES.
@@ -100,20 +102,43 @@ As pointed out before, this concept *does **not*** apply to the files in the top
 --routes blog:posts[/][/new][/update][/destroy] # YES.
 ```
 
-[Read more.](https://github.com/adammcarth/gexpress/wiki/#)
+[Read more on the routes wiki page.](https://github.com/adammcarth/gexpress/wiki/#)
 
 <h4 id="user-content-views"><a href="https://github.com/adammcarth/gexpress/wiki/#">Views [--views]</a></h4>
 
+```bash
+--views [file][file2]
+--views directory:directory:[file]
+```
+
+The views option is a method for generating custom view files in the `./views` directory. Subdirectories within `./views` can also be created, as per the example above.
 
 <h4 id="user-content-layouts"><a href="https://github.com/adammcarth/gexpress/wiki/#">Layouts [--layouts]</a></h4>
 
+```bash
+--layouts [file][file2]
+--layouts directory:directory:[file]
+```
+
+The layouts option is a method for generating custom layout files in the `./layouts` directory. Subdirectories within `./layouts` can also be created, as per the example above.
+
+The gexpress generator creates a `default.html` layout automatically that is used by default for all routes. You can find out more about changing which layouts certain routes use on the [layouts wiki page](https://github.com/adammcarth/gexpress/wiki/#).
 
 <h4 id="user-content-port"><a href="https://github.com/adammcarth/gexpress/wiki/#">Default Port [--port]</a></h4>
 
+```bash
+--port 3000
+```
+
+Specify the default port that your application runs on (defaults to `3000`). This can of course be changed using environment variables, but it's always important to have a default to rollback to if this is not specified. Read more about setting the environment variable of the [port wiki page](https://github.com/adammcarth/gexpress/wiki/#).
 
 <h4 id="user-content-nogit"><a href="https://github.com/adammcarth/gexpress/wiki/#">No Git Repository [--nogit]</a></h4>
 
+```bash
+--nogit
+```
 
+By default, gexpress creates a new git repository after the application has been fully generated. To prevent this from happening, simply use the `--nogit` option when running gexpress from the command line. This option takes no parameters: simply defining it is enough.
 
 ## Asset Pipeline
 
