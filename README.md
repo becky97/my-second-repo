@@ -142,7 +142,18 @@ By default, gexpress creates a new git repository after the application has been
 
 ## Asset Pipeline
 
+The gexpress generator creates a pre-configured asset pipeline that uses [gulp](http://gulpjs.com) to handle specific tasks. This pipeline takes care of compiling [SASS](http://sass-lang.com) for your stylesheets, [ES6 Javascript](https://github.com/lukehoban/es6features) to frontend compatible ES5 Javascript, as well as minification and asset concatenation.
 
+| Real Directory                      | Public Directory      | Purpose                                                        |
+|-------------------------------------|-----------------------|----------------------------------------------------------------|
+| `/assets/fonts`                     | `/assets/fonts`       | All font files (including icon fonts) should be placed here.   |
+| `/assets/images`                    | `/assets/images`      | All images should be placed in here.                           |
+| `/assets/javascript/source/es6`     | N/A                   | All your custom Javascript files go here.                      |
+| `/assets/javascript/source/vendor`  | N/A                   | Vendor Javascript (external libraries) go here.                |
+| `/assets/javascript/compiled`       | `/assets/javascript`  | All Javascript files are compiled into this directory.         |
+| `/assets/stylesheets/source/sass`   | N/A                   | All your custom stylesheets should go here (`.sass` & `.css`). |
+| `/assets/stylesheets/source/vendor` | N/A                   | Vendor CSS (external libraries) go here.                       |
+| `/assets/stylesheets/compiled`      | `/assets/stylesheets` | All                                                            |
 
 ## Helpers
 
