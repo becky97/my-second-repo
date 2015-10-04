@@ -146,18 +146,80 @@ The gexpress generator creates a pre-configured asset pipeline that uses [gulp](
 
 | Real Directory                      | Public Directory      | Purpose                                                        |
 |-------------------------------------|-----------------------|----------------------------------------------------------------|
-| `/assets/fonts`                     | `/assets/fonts`       | All font files (including icon fonts) should be placed here.   |
-| `/assets/images`                    | `/assets/images`      | All images should be placed in here.                           |
-| `/assets/javascript/source/es6`     | N/A                   | All your custom Javascript files go here.                      |
-| `/assets/javascript/source/vendor`  | N/A                   | Vendor Javascript (external libraries) go here.                |
-| `/assets/javascript/compiled`       | `/assets/javascript`  | All Javascript files are compiled into this directory.         |
-| `/assets/stylesheets/source/sass`   | N/A                   | All your custom stylesheets should go here (`.sass` & `.css`). |
-| `/assets/stylesheets/source/vendor` | N/A                   | Vendor CSS (external libraries) go here.                       |
-| `/assets/stylesheets/compiled`      | `/assets/stylesheets` | All                                                            |
+| `./assets/fonts`                     | `/assets/fonts`       | All font files (including icon fonts) should be placed here.   |
+| `./assets/images`                    | `/assets/images`      | All images should be placed in here.                           |
+| `./assets/javascript/source/es6`     | N/A                   | All your custom Javascript files go here.                      |
+| `./assets/javascript/source/vendor`  | N/A                   | Vendor Javascript (external libraries) go here.                |
+| `./assets/javascript/compiled`       | `/assets/javascript`  | All Javascript files are compiled into this directory.         |
+| `./assets/stylesheets/source/sass`   | N/A                   | All your custom stylesheets should go here (`.sass` & `.css`). |
+| `./assets/stylesheets/source/vendor` | N/A                   | Vendor CSS (external libraries) go here.                       |
+| `./assets/stylesheets/compiled`      | `/assets/stylesheets` | All CSS files are compiled into this directory.                |
+
+### Collections
+
+A common technique used in web applications is the concatenate certain groups of CSS & JS files (respectively) in order to cut down the amount of HTTP requests required to load assets on the frontend. The gexpress generated asset pipeline attempts to make this process as easy as possible, by introducing the concept of CSS & JS "collections". Collections are defined in `./config/assets.js`, so no editing of gulp configuration is required...
+
+```javascript
+// Defining collections: example
+"collections": {
+  "css": {
+    "output_filename": [
+      "style.css" // ./assets/stylesheets/compiled/style.css
+    ]
+  },
+
+  "js": {
+    "output_filename": [
+      "vendor/jquery-1.11.3.min.js", // ./assets/javascript/compiled/vendor/jquery-1.11.3.min.js
+      "main.js" // ./assets/javascript/compiled/main.js
+    ]
+  }
+}
+```
 
 ## Helpers
 
+The gexpress generator also creates some basic view file helper methods to use in your templates.
 
+### Collections
+
+The collection helpers let you include specific asset collections in layout files. In the `development` environment, all files in your collection are included *individually* to make debugging easier for frontend developers. If the application is running in any other environment, eg - `staging` or `production`, one single concatenated and minified file will be included for the collection.
+
+```html
+<head>
+  <title>My Awesome App!</title>
+  <!-- Stylesheets -->
+  {{css_collection my_css_group}}
+  <!-- Javascript -->
+  {{js_collection my_js_group}}
+</head>
+```
+
+**OUTPUT IN DEVELOPMENT ENVIRONMENT:**
+
+```html
+<head>
+  <title>My Awesome App!</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/foo.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/bar.css" media="screen" />
+  <!-- Javascript -->
+  <script type="text/javascript" src="/assets/javascript/foo.js"></script>
+  <script type="text/javascript" src="/assets/javascript/bar.js"></script>
+</head>
+```
+
+**OUTPUT IN OTHER ENVIRONMENTS:**
+
+```html
+<head>
+  <title>My Awesome App!</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/collections/my_css_group.min.css" media="screen" />
+  <!-- Javascript -->
+  <script type="text/javascript" src="/assets/javascript/collections/my_js_group.min.js"></script>
+</head>
+```
 
 ## Contributing
 
