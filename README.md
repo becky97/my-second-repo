@@ -33,6 +33,7 @@ gexpress <options>
 | [--views](#user-content-views)                 | Creates defined view files for your application.                              |
 | [--layouts](#user-content-layouts)             | Creates defined layout files for your application.                            |
 | [--port](#user-content-port)                   | Specify the default port your application runs on.                            |
+| [--repository](#user-content-repository)       | Repository URL for your app's `package.json` file.                            |
 | [--nogit](#user-content-nogit)                 | Prevents gexpress from creating a new git repository for the app.             |
 | --help                                         | Brings up a list of the options above in the CLI.                             |
 
@@ -132,6 +133,14 @@ The gexpress generator creates a `default.html` layout automatically that is use
 
 Specify the default port that your application runs on (defaults to `3000`). This can of course be changed using environment variables, but it's always important to have a default to rollback to if this is not specified. Read more about setting the environment variable of the [port wiki page](https://github.com/adammcarth/gexpress/wiki/#).
 
+<h4 id="user-content-nogit"><a href="https://github.com/adammcarth/gexpress/wiki/#">Repository [--repository]</a></h4>
+
+```bash
+--repository="https://github.com/username/myApp"
+```
+
+Adds this URL to your app's `package.json` file. In the future there will be an integration with the git repository initalizer that adds this URL automatically to the remote upstream. See [./TODO.md](https://github.com/adammcarth/gexpress/TODO.md) for more info.
+
 <h4 id="user-content-nogit"><a href="https://github.com/adammcarth/gexpress/wiki/#">No Git Repository [--nogit]</a></h4>
 
 ```bash
@@ -177,6 +186,16 @@ A common technique used in web applications is the concatenate certain groups of
 }
 ```
 
+### Asset Watcher
+
+You can automatically compile assets when they change by running the gulp asset watcher task in a seperate window:
+
+```bash
+gulp watch:assets
+```
+
+So long as this script is left running in the background while you develop, gulp will compile your assets as you make changes to them. This includes SASS & ES6 compilation, collection creation and minification. The watcher will also react to changes made in the `.config/assets.js` file.
+
 ## Helpers
 
 The gexpress generator also creates some basic view file helper methods to use in your templates.
@@ -189,9 +208,9 @@ The collection helpers let you include specific asset collections in layout file
 <head>
   <title>My Awesome App!</title>
   <!-- Stylesheets -->
-  {{css_collection my_css_group}}
+  {{{ css_collection my_css_group }}}
   <!-- Javascript -->
-  {{js_collection my_js_group}}
+  {{{ js_collection my_js_group }}}
 </head>
 ```
 
@@ -236,7 +255,7 @@ Indents HTML `n` spaces into the correct position in a layout file. Can be used 
 Takes a timestamp and returns the time period between then and now in words (eg: '15 minutes ago').
 
 ```
-<p>Edited {{time_ago_in_words}} {{comment.updated_at}} {{/time_ago_in_words}}</p>
+<p>Edited {{#time_ago_in_words}} {{comment.updated_at}} {{/time_ago_in_words}}</p>
 ```
 
 ## Contributing
